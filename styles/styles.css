@@ -84,6 +84,8 @@ body {
     font-size: 1em;
     font-weight: lighter;
     font-style: italic;
+    user-select: none; 
+    cursor: default;
 }
 
 /* Navigation */
@@ -135,6 +137,7 @@ body {
     border-radius: 100px;
     padding: 0.8em;
 }
+
 
 /* Bottom Fade */
 .sitewide-bottom-fade {
@@ -195,6 +198,8 @@ body {
     font-size: small;
     width: auto;
     margin: 0;
+    user-select: none; 
+    cursor: default;
 }
 
 #footer-last-updated {
@@ -204,6 +209,8 @@ body {
     width: auto;
     margin: 0;
     font-weight: 400;
+    user-select: none; 
+    cursor: default;
 }
 
 /* -- // Content -- */
