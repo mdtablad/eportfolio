@@ -2,8 +2,9 @@
 body {
     background-color: black;
     margin: 0; /* Reminder for future self: set margin to 0 if you're crashing out abt it */
-    margin-left: 1.2%;
-    margin-right: 1.2%;
+    /* margin-left: 1.2%; */
+    /* margin-right: 1.2%; */
+    font-family: 'Poppins', 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* -- // Custom -- */
@@ -23,7 +24,7 @@ body {
     top: 0;
     left: 0;
     z-index: 1;
-    background-color: black;
+    background-color: rgb(132, 192, 212);
 }
 
 .wrap {
@@ -31,13 +32,14 @@ body {
     width: 100%;
     height: auto;
     z-index: 2;
-    background-color: grey;
+    background-color: rgba(132, 192, 212, 0);
 }
 
 /* -- Sitewide (Wrap) */
 /* Header */
 .sitewide-header {    
     position: fixed;
+    left: 0%;
     margin-left: 0%;
     width: 100%;
     height: 8%;
@@ -45,21 +47,24 @@ body {
     justify-content: left;
     align-items: center;
     z-index: 100;
-    padding-left: 0.4em;
+    padding-left: 0em;
 }
 
 .header-bar {
-    position: relative;
-    width: 12%;
-    height: 100%;
+    position: absolute;
+    top: 0px;
+    width: auto;
+    height: 50px;
     display: flex;
     justify-content: right;
     align-items: center;
     background-color: black;
     margin-top: 1em;
-    margin-left: -3.2em;
-    padding-right: 0.6em;
+    padding-left: 3.2em;
+    padding-right: 1em;
     border-radius: 25px;
+    margin-left: -2.2em;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.5);
 }
 
 .header-icon {
@@ -84,7 +89,8 @@ body {
 /* Navigation */
 .sitewide-navigation {
     position: fixed;
-    width: 5%;
+    left: 0.8em;
+    width: auto;
     height: 100%;
     background-color: rgba(169, 169, 169, 0);
     display: flex;
@@ -96,18 +102,20 @@ body {
 .nav-island {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 5px;
     align-items: center;
-    height: 30%;
+    height: auto;
     width: 100%;
     margin: 0 auto;
     background-color: black;
     border-radius: 100px;
     margin: 0.3em;
-    padding-left: 0.4em;
-    padding-right: 0.4em;
-    padding-bottom: 0.3em;
-    padding-top: 0.3em;
+    padding-left: 0.45em;
+    padding-right: 0.45em;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.5);
 }
 
 .nav-option {
@@ -115,6 +123,10 @@ body {
     background-color: rgba(54, 54, 54, 0.363);
     border-radius: 100px;
     padding: 0.8em;
+    width: 1.4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-opt-selected {
@@ -124,11 +136,219 @@ body {
     padding: 0.8em;
 }
 
+/* Bottom Fade */
+.sitewide-bottom-fade {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px; /* Adjust this to change how tall the fade is */
+  
+  /* The Fade Effect */
+  /* Change 'white' to match your background color */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.822) -40%, rgba(255, 255, 255, 0) 80%);
+  
+  /* Functional Details */
+  z-index: 9999; /* Keeps it on top of all other elements */
+  pointer-events: none; /* Crucial: allows you to click buttons/links "behind" the fade */
+}
+
+/* Footer */ 
+.sitewide-footer {
+    position: relative;
+    left: 0.8em;
+    width: auto;
+    height: 100%;
+    background-color: rgba(169, 169, 169, 0);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    z-index: 100;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.footer-bar {
+    position: relative;
+    top: 0px;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: right;
+    align-items: left;
+    flex-direction: column;
+    gap: 0.2em;
+    background-color: black;
+    margin-top: 1em;
+    padding-left: 3.2em;
+    padding-right: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-radius: 25px;
+    margin-left: -2.2em;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.5);
+}
+
+#footer-text {
+    color: white;
+    text-align: left;
+    font-size: small;
+    width: auto;
+    margin: 0;
+}
+
+#footer-last-updated {
+    color: white;
+    text-align: left;
+    font-size: x-small;
+    width: auto;
+    margin: 0;
+    font-weight: 400;
+}
+
 /* -- // Content -- */
 .inner-wrap {
     position: relative;
     width: 100%;
-    height: 110vh;
+    height: 100vh;
     margin: 0 auto;
-    background-color: lightgrey;
+    /* margin-left: 3.3em; */
+    background-color: rgb(132, 192, 212);
+}
+
+.inner-wrap-content {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-left: 3.2em;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+/* Cover Section */
+.cover-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(132, 192, 212, 0);
+    display: flex;
+    flex-direction: row;
+}
+
+.cover-name-area {
+    margin-left: 10em;
+    position: relative;
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#cover-name {
+    background-color: rgb(34, 34, 34);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.774) 40%, rgba(255, 255, 255, 0) 90%);
+    padding: 3em;
+    border-radius: 20px;
+    position: absolute;
+    right: -65vw;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 65%;
+    /*margin-right: -30em;*/
+    padding-right: 67vw; 
+    box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.5);
+}
+
+#cover-name-text {
+    color: white;
+    border-radius: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    margin-left: -6em;
+    width: 80%;
+    margin-top: -2em;
+}
+
+#cover-name-1 {
+    font-size: 3.7em;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+}
+
+#cover-name-2 {
+    font-size:5.9em;
+    margin-top: -0.35em;
+    margin-bottom: 0em;
+    padding: 0;
+    padding-left: 0.1em;
+    font-weight: 300;
+}
+
+#cover-tag-text {
+    color: white;
+    border-radius: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    margin-left: -6em;
+    width: 80%;
+}
+
+#cover-tagline {
+    font-size: 1.67em;
+    margin: 0;
+    padding-left: 0.2em;
+    font-weight: 300;
+}
+
+.cover-photo-area {
+    position: relative;
+    width: 40%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cover-photo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    padding-right: 5em;
+    backdrop-filter: blur(1px);
+    mask-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 1) 0%,   /* Fully opaque (full blur) at the top */
+    rgba(0, 0, 0, 1) 75%,  /* Full blur for the first 50% */
+    rgba(0, 0, 0, 0) 100%  /* Fully transparent (no blur) at the bottom */
+  );
+}
+
+#cover-photo-img {
+    align-self: bottom;
+    width: auto;
+    height: 92%;
+    border-radius: 15px;
+    z-index: 50;
 }
